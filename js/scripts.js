@@ -1,9 +1,7 @@
 
 $(document).ready(function () {
   $("#groceryList").submit(function (event) {
-    const list = $("#items").val();
-    const groceries = [];
-    groceries.push(list);
+    const groceries = $("#items").val().split(" ");
     groceries.forEach(function (grocery) {
       $("#list").append($("<li>").text(grocery));
 
